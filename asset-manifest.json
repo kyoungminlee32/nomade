@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/nomade/static/css/main.ca6f9cd0.css",
-    "main.js": "/nomade/static/js/main.52097823.js",
+    "main.css": "/nomade/static/css/main.8c6ae772.css",
+    "main.js": "/nomade/static/js/main.16f18416.js",
     "static/js/787.0fb1eb62.chunk.js": "/nomade/static/js/787.0fb1eb62.chunk.js",
     "static/media/splash_bg.png": "/nomade/static/media/splash_bg.24134ca37506e2e7c66c.png",
     "static/media/NotoSansKR-Regular.otf": "/nomade/static/media/NotoSansKR-Regular.ebab7adffa8d17f55ca6.otf",
@@ -89,12 +89,12 @@
     "static/media/ico_main_mymenu_set.png": "/nomade/static/media/ico_main_mymenu_set.444fa89ec1d4940751dc.png",
     "static/media/ico_loginTime.png": "/nomade/static/media/ico_loginTime.8d3a6ba945ed2901b700.png",
     "index.html": "/nomade/index.html",
-    "main.ca6f9cd0.css.map": "/nomade/static/css/main.ca6f9cd0.css.map",
-    "main.52097823.js.map": "/nomade/static/js/main.52097823.js.map",
+    "main.8c6ae772.css.map": "/nomade/static/css/main.8c6ae772.css.map",
+    "main.16f18416.js.map": "/nomade/static/js/main.16f18416.js.map",
     "787.0fb1eb62.chunk.js.map": "/nomade/static/js/787.0fb1eb62.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ca6f9cd0.css",
-    "static/js/main.52097823.js"
+    "static/css/main.8c6ae772.css",
+    "static/js/main.16f18416.js"
   ]
 }
