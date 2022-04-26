@@ -13,7 +13,7 @@ function Home() {
 					<section className="with-fixedBtn">
 						<div style={{width:'100%',height:'900px',background:'#ddd'}}>
 							<Nav />
-							메인페이지
+							메인홈페이지
 						</div>
 					</section>
 				</div>
