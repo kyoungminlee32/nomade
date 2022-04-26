@@ -1248,7 +1248,7 @@ ul.suggestion {padding: 30px 0 30px 25px; border-bottom: 10px solid #eee;}
 .suggestion li h2 + a::before {position: absolute; top: 1px; right: 0; content: ''; border: 1px solid #222; border-radius: 50%; width: 10px; height: 10px;}
 .suggestion li h2 + a::after {position: absolute; top: 2px; right: 0px; font-family: 'allonebank'; content: '\e918'; font-size: 11px;}
 .suggestion .suggestList .swiper-slide {border: 1px solid #e0e0e0; border-radius: 10px; width: 67px; height: 67px;}
-.suggestion .suggestList .swiper-slide a {display: flex; justify-content: center; align-items: center; padding: 10px 5px; text-align: center; font-size: 12px; word-wrap: break-word; word-break: break-all;}
+.suggestion .suggestList .swiper-slide a {display: flex; justify-content: center; align-items: center; padding: 10px 5px; text-align: center; font-size: 12px; line-height:1.2; word-wrap: break-word; word-break: break-all;}
 .suggestion .suggestList .swiper-slide.main_point a {display:block; padding-top:18px;}
 .suggestion .suggestList .swiper-slide.main_point a > * {display:inline-block; margin-bottom:4px;}
 .mainContent .swiper-slide a {width: 100%; height: 100%; color: #222;}

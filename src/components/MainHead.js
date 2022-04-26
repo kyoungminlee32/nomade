@@ -1,9 +1,9 @@
 import React from "react";
 import {Link} from "react-router-dom";
-function Header() {
+function MainHead() {
   return (
     <div>
-        <header id="header" className="header menu-container">
+        <header id="header" className="header menu-container main colour1">
           <nav>
             <h1 className="headerTitle"><Link to="/nomade">allone Bank</Link></h1>	
             <ul className="columnSet rightedColumn">
@@ -21,4 +21,4 @@ function Header() {
   )
 }
 
-export default Header;
+export default MainHead;

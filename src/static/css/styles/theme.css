@@ -60,7 +60,7 @@
 .loginRefer .btn {font-size:12px;border:1px solid #27b2a5;color:#27b2a5;border-radius:16px;padding:6px 20px;width:auto;margin:40px auto 0;display:block;}
 	
 /* 로그인시 계좌 슬라이더 영역 */
-.accountList {position:relative;height:100%;/*min-height:257px;*/}
+.accountList {position:relative;height:100%;min-height:257px;}
 .accountList > .btn {position:absolute;right:5px;top:20px;width:35px;height:30px;overflow:hidden;color:transparent;}
 .accountList > .btn::after {font-family:'allonebank';position:absolute;width:100%;right:0;top:0;text-align:center;font-size:30px;line-height:30px;color:#e0e0e0;content:'\e906';color:#333;}
 .accountList > dl {margin:38px 0;}
@@ -210,7 +210,7 @@ ul.suggestion {padding:30px 0;border-bottom:10px solid #eee;}
 .newsHeadline a span {display:inline-block;padding:0 6px;margin-right:5px;line-height:14px;font-size:10px;color:#ff4848;border:solid 1px #ff4848;}
 
 /* 이벤트 배너 영역 */
-.mainContent .eventList {height:115px;}
+.mainContent .eventList {height:auto;}
 .mainContent .eventList .swiper-slide img {width:100%;}
 .mainContent .eventList .swiper-slide {background-color:#fff;}
 .mainContent .eventList.swiper-container-horizontal>.swiper-pagination-bullets, 
@@ -221,7 +221,7 @@ ul.suggestion {padding:30px 0;border-bottom:10px solid #eee;}
 .groupList h2 {text-align:center;font-size:25px;color:#222;}
 .groupList h2 > a {display:inline-block;position:relative;font-size:16px;font-weight:normal;margin:10px 0 15px;padding-right:16px;}
 .groupList h2 > a::after {position:absolute;top:1px;right:0;font-family:'allonebank';content:'\e98f';font-size:15px;}
-.familyList {margin-left:-12%;padding:10px 0;}
+.familyList {margin-left:-12%;padding:10px 15px;}
 .familyList .swiper-wrapper {align-items:center;}
 .familyList .swiper-slide {border-radius:15px;font-size:11px;width:25%;height:100px;-webkit-box-shadow:1px 1px 10px 1px rgba(0,0,0,0.1);box-shadow:1px 1px 10px 1px rgba(0,0,0,0.1);}
 .familyList .swiper-slide.swiper-slide-active {position:relative;width:35%;height:140px;color:#222;font-size:14px;}
@@ -245,14 +245,14 @@ ul.suggestion {padding:30px 0;border-bottom:10px solid #eee;}
 
 
 /* main footer mymenu */
-.mainContent .myMenu {border-top:solid 1px #bdbdbd;background:#fff;}
-.mainContent .myMenu button {display:block;position:relative;width:100%;height:100%;padding:34px 0 7px;box-sizing:border-box;line-height:13px;font-size:12px;color:#222;background:transparent;}
-.mainContent .myMenu button:after{font-family:'allonebank';font-size:28px;display:block;position:absolute;left:50%;top:12px;width:44px;height:44px;content:'\e988';-webkit-transform:translateX(-50%);transform:translateX(-50%);}
-.mainContent .myMenu button.myMenu02:after{content:'\e964';}
-.mainContent .myMenu button.myMenu03:after{content:'\e9ad';}
-.mainContent .myMenu button.myMenu04:after{content:'\e91e';}
-.mainContent .myMenu button.myMenu05:after{content:'\e95c';}
-.mainContent .myMenu button.myMenu06:after{content:'\e95d';}
+.mainContener .myMenu {border-top:solid 1px #bdbdbd;background:#fff;}
+.mainContener .myMenu button {display:block;position:relative;width:100%;height:100%;padding:34px 0 7px;box-sizing:border-box;line-height:13px;font-size:12px;color:#222;background:transparent;}
+.mainContener .myMenu button:after{font-family:'allonebank';font-size:28px;display:block;position:absolute;left:50%;top:12px;width:44px;height:44px;content:'\e988';-webkit-transform:translateX(-50%);transform:translateX(-50%);}
+.mainContener .myMenu button.myMenu02:after{content:'\e964';}
+.mainContener .myMenu button.myMenu03:after{content:'\e9ad';}
+.mainContener .myMenu button.myMenu04:after{content:'\e91e';}
+.mainContener .myMenu button.myMenu05:after{content:'\e95c';}
+.mainContener .myMenu button.myMenu06:after{content:'\e95d';}
 
 .planFinish .planImg.modal-alert{padding-top:90px;}
 .planFinish .planImg::before{position:absolute;top:30px;left:50%;display:block;width:122px;height:122px;content:'';background:url('/public/static/img/main_page/plan_finish_img_set.png') 0 0 no-repeat;overflow:hidden;-webkit-transform:scale(0.5) translateX(-50%);transform:scale(0.5) translateX(-50%);-webkit-transform-origin:0 0;transform-origin:0 0;}
@@ -3129,3 +3129,13 @@ h2 + .boardList7{margin-top:15px}
 .tab_list li a{
 	padding:10px;
 }
+
+.swiper{overflow:visible !important;position: inherit !important;}
+.swiper-button-prev,.swiper-button-next {z-index:10000 !important;}
+.swiper-horizontal>.swiper-pagination-bullets{bottom:25px !important;}
+.productList .swiper{height:157px;position: relative !important;}
+.productList .swiper-pagination-bullets{bottom:10px !important;}
+.suggestList .swiper{padding-right:7px;}
+.suggestion li:last-child{overflow:hidden;}
+.eventList .swiper{position:relative !important;}
+.eventList .swiper-horizontal .swiper-pagination-bullets{left:23px;width:auto;bottom:10px !important;}

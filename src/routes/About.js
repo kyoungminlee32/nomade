@@ -7,7 +7,7 @@ function About() {
     <div>
         {/* #wrap */}
         <div id="wrap">
-                <Header />
+          <Header />
           <div id="container">
             <div className="content" data-role="content">
               <section className="with-fixedBtn">

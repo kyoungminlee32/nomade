@@ -183,7 +183,7 @@ div[data-role="content"],
 
 /* 메인 색상설정 */
 .main {border-bottom:0; padding: 0;}
-.main a {color: #fff;}
+.main a,.main button {color: #fff;}
 .header.colour1,
 .main.colour1 {background-color: #12a396;} /* default */
 .main.colour2 {background-color: #d762ba;} /* grape */
@@ -204,7 +204,8 @@ div[data-role="content"],
 .headerTitle.withHelp {display: flex; justify-content: center; align-items: center;}
 
 .headerTitle.logo,
-.main .headerTitle {/*text-indent: -99999px; font-size: 0; */height: 20px; width: 125px; letter-spacing:1.5em; color:transparent; }
+.main .headerTitle {cursor:pointer;height: 20px; width: 125px; letter-spacing:1.5em; color:transparent; }
+.main .headerTitle a{padding:0;color: transparent;}
 .headerTitle.logo::after,
 .main .headerTitle::after {content: ''; position:absolute; left:0; top:0; display: block; background: url('/public/static/img/common/allone_logo.png') no-repeat; width: 100%; height: 100%; background-size: cover;}
 .loginDefalut .headerTitle.logo::after {background: url('/public/static/img/common/allone_logo_coloured.png') no-repeat; width: 100%; height: 100%; background-size: cover;}

@@ -152,8 +152,8 @@ ol[class$=List-slide] > .swiper-slide li a {font-size: 13px; padding: 10px 0; te
 ol[class$=List-slide] > .swiper-slide dl {width: 100%;}
 
 /*.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {margin: 0 3px;}*/
-.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {height:10px;width:10px;margin: 0 5px;}
-.swiper-pagination-bullet-active {background-color: #12a396;}
+.swiper-pagination-bullet {height:10px !important;width:10px!important;margin: 0 5px!important;}
+.swiper-pagination-bullet-active {background-color: #12a396 !important;}
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet:first-of-type {margin-left: 0;}
 .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet:last-of-type	{margin-right: 0;}
 

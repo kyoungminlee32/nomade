@@ -1,9 +1,9 @@
 import React from "react";
 
-function AboutInfo01() {
+function Introduction() {
   return (
     <span>서브페이지</span>
   );
 }
 
-export default AboutInfo01;
+export default Introduction;
