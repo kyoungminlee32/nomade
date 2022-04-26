@@ -1,9 +1,9 @@
-import './App.css';
 import React from "react";
 import {BrowserRouter,Routes,Route} from "react-router-dom";
+import './static/css/main.css';
 import Home from "./routes/Home";
 import About from "./routes/About";
-import AboutInfo01 from "./routes/AboutInfo01";
+import UIPDA1001 from "./routes/UIPDA1001";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <Routes> 
         <Route path="/nomade" element={<Home />} />
         <Route path="/nomade/about" element={<About />} />
-        <Route path=":AboutInfo01" element={<AboutInfo01 />} />
+        <Route path="/nomade/UIPDA1001" element={<UIPDA1001 />} />
       </Routes>
     </BrowserRouter>
     
