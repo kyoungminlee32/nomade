@@ -39,7 +39,7 @@
 .mainContent .swiper-slide .services {height:100%;}
 
 /* 미로그인 시 노출되는 서비스 영역 */
-.serviceList {padding:20px 25px 40px;height:100%;max-height:317px;}
+.serviceList {overflow:hidden;padding:20px 25px 40px;height:100%;max-height:317px;}
 .serviceList .swiper-slide {height:100%;max-height:271px;min-height:257px;background-color:#fff;border-radius:10px;display:flex;justify-content:center;align-items:center;-webkit-box-shadow:1px 1px 20px 3px rgba(0,0,0,0.2);box-shadow:1px 1px 20px 3px rgba(0,0,0,0.2);}
 .services li:not(:nth-child(2n)) {border-right:1px solid #e0e0e0;}
 .services li:not(:nth-child(n+5)) {border-bottom:1px solid #e0e0e0;}
@@ -85,7 +85,7 @@
 
 /* 상품 배너 및 상품 슬라이더 영역 */
 .mainContent .productList,
-.mainContent .eventList {width:100%;height:167px;max-width:100%;padding:0;border-bottom:10px solid #eee;border-radius:0;}
+.mainContent .eventList {overflow:hidden;width:100%;height:167px;max-width:100%;padding:0;border-bottom:10px solid #eee;border-radius:0;}
 .mainContent .productList .swiper-slide {background-color:#e9f0de;}
 .mainContent .productList .swiper-slide img {height:100%;width:100%;}
 
@@ -217,7 +217,7 @@ ul.suggestion {padding:30px 0;border-bottom:10px solid #eee;}
 .mainContent .eventList .swiper-pagination-custom, .swiper-pagination-fraction {bottom:20px;left:25px;width:auto;}
 
 /* NH금융그룹 슬라이더 영역 */
-.groupList {padding:30px 0;}
+.groupList {overflow:hidden;padding:30px 0;}
 .groupList h2 {text-align:center;font-size:25px;color:#222;}
 .groupList h2 > a {display:inline-block;position:relative;font-size:16px;font-weight:normal;margin:10px 0 15px;padding-right:16px;}
 .groupList h2 > a::after {position:absolute;top:1px;right:0;font-family:'allonebank';content:'\e98f';font-size:15px;}
@@ -3139,3 +3139,5 @@ h2 + .boardList7{margin-top:15px}
 .suggestion li:last-child{overflow:hidden;}
 .eventList .swiper{position:relative !important;}
 .eventList .swiper-horizontal .swiper-pagination-bullets{left:23px;width:auto;bottom:10px !important;}
+
+.toggle{padding:10px;border:1px solid #ccc;}

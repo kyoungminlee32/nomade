@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
+import {Link} from "react-router-dom";
 
 function About() {
   return (
@@ -13,12 +14,13 @@ function About() {
               <section className="with-fixedBtn">
                 <div style={{width:'100%',height:'900px',background:'#ddd'}}>
                   <Nav />
-                  소개페이지
+                  <Link to={{
+                    pathname:"/nomade/about/Introduction",
+                  }}>소개페이지</Link>
                 </div>
               </section>
             </div>
           </div>
-          <footer id="footer"></footer>
         </div>
         {/* //#wrap */}
     </div> 

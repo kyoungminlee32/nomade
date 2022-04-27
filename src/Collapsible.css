@@ -1,0 +1,19 @@
+.collapsible{padding:0.5rem;}
+.collapsible .toggle{
+    background:#0084ff;
+    border-radius:5px;
+    padding:0.3rem;
+    border:unset;
+    color:#fff;
+}
+.collapsible .content{
+    border:1px solid #fff;
+    padding:0.5rem;
+    border-radius:5px;
+    margin-bottom:0.5rem;
+}
+.collapsible .content-parent{
+    overflow:hidden;
+    transition:height ease 0.3s;
+}
+

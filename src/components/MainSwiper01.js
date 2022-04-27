@@ -24,7 +24,7 @@ function MainSwiper01() {
                             <Link to="/nomade/about" title="NH금융그룹 바로가기"><strong>NH금융그룹</strong><span>NH금융자산 통합조회</span></Link>
                         </li>
                         <li className="rowSpan6">
-                            <Link to="#/" onClick={e => e.preventDefault()} title="금융상품몰 바로가기"><strong>금융상품몰</strong> <span>실속금융상품 가입해봄</span></Link>
+                            <Link to="/nomade/about/Introduction" title="금융상품몰 바로가기"><strong>금융상품몰</strong> <span>실속금융상품 가입해봄</span></Link>
                         </li>
                         <li className="rowSpan6">
                             <Link to="#/" onClick={e => e.preventDefault()} title="올원송금 바로가기"><strong>올원송금</strong> <span>음성으로 쉽고 빠르게!</span></Link>

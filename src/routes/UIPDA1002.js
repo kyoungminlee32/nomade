@@ -26,7 +26,7 @@ function UIPDA1002() {
 									</li>
 									<li className="myallone_userPhoto">
 										<Link to="#/" onClick={e => e.preventDefault()} title="마이올원으로 이동" className="bg7">
-											<span><img src="../../assets/img/myallone/profile_sample.png" alt="" /></span>
+											<span><img src="/nomade/static/img/myallone/profile_sample.png" alt="" /></span>
 											<em>MY 포인트</em>
 										</Link>
 									</li>
@@ -54,7 +54,6 @@ function UIPDA1002() {
 				</div>
 				<Footer id="footer" />
 			</div>
-			
 		</div>
 		{/* //#wrap */}
     </div>
