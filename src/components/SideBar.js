@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 
 function SideBar(props) {
-    return(props.trigger) ? (
+    return (
         <div className="">
             <aside data-role="global-navigation" className={SideBar ? "gnb no-transform" : "gnb"} id="gnb">
                 {/* <!-- 상단 메뉴 --> */}
@@ -309,7 +309,7 @@ function SideBar(props) {
             </aside>
             <div id="layerMask" className="dimmed dp-block" style={{zIndex:1009}}></div>
         </div>
-    ) : null;
+    )
 }
 
 export default SideBar;
