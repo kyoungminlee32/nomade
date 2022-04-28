@@ -5,7 +5,7 @@ import Nav from "../components/Nav";
 
 function UIPDA1001() {
 	const [buttonPopup,setButtonPopup] = useState(false);
-
+	console.log(buttonPopup);
   	return (
 		<div>
 			{/* #wrap */}

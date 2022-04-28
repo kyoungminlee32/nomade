@@ -1,8 +1,14 @@
-import React from "react";
+import {React, useState} from "react";
 import {Link} from "react-router-dom";
-import SideBar from "./SideBar";
+import SideBars from "./SideBar";
 
 function MainHead() {
+  const [SideBar,setSideBar] =useState(false);
+  const showOPen = () => {
+    setSideBar(!SideBar);
+    document.body.className='noScroll'
+  }
+  
 
   return (
     <div>
@@ -14,16 +20,15 @@ function MainHead() {
                 <button className="headerNav alarmBtn push">알림</button>
               </li>
               <li>
-                <input type="checkbox" className="headerNav navBtn" id="all_menu" /><label htmlFor="all_menu">전체메뉴</label>
+                <input type="checkbox" className="headerNav navBtn" id="all_menu" onClick={showOPen} /><label htmlFor="all_menu">전체메뉴</label>
               </li>
             </ul>
           </nav>
         </header>
         {/* <!-- 잔체메뉴 --> */}
-        <SideBar />
+        <SideBars trigger={SideBar} setTrigger={setSideBar} />
         {/* <!-- // 전체메뉴 --> */}
     </div> 
-    
   )
 }
 

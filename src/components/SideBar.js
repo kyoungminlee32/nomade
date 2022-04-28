@@ -1,10 +1,14 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-function SideBar(props) {
+function SideBars(props) {
+    const hideOPen = () => {
+        props.setTrigger(false);
+        document.body.className=''
+    }
     return (
-        <div className="">
-            <aside data-role="global-navigation" className={SideBar ? "gnb no-transform" : "gnb"} id="gnb">
+        <div>
+            <aside data-role="global-navigation" className={props.trigger ? "gnb no-transform" :"gnb"} id="gnb">
                 {/* <!-- 상단 메뉴 --> */}
                 <ul className="columnSet gnbNav rightedColumn">
                     <li className="mgRauto"><Link to="#/" onClick={e => e.preventDefault()} title="로그아웃" className="headerNav logoutBtn" role="button">로그아웃</Link></li>
@@ -12,7 +16,7 @@ function SideBar(props) {
                     <li><Link to="#/" onClick={e => e.preventDefault()} className="headerNav searchBtn" title="검색하기" role="button">검색하기</Link></li>
                     <li><Link to="#/" onClick={e => e.preventDefault()} className="headerNav settingBtn" title="설정화면으로 이동" role="button">설정화면으로 이동</Link></li>
                 </ul>
-                <button type="button" className="headerNav closeBtn" id="gnbClose" onClick={() => props.setTrigger(false)}>전체메뉴 닫기</button>
+                <button type="button" className="headerNav closeBtn" id="gnbClose" onClick={hideOPen}>전체메뉴 닫기</button>
 
                 <ul className="columnSet greeting pdT20 pdB20 bdB1">
                     {/* <!-- 로그인 전 노출
@@ -307,9 +311,9 @@ function SideBar(props) {
                     </ul>
                 </div>
             </aside>
-            <div id="layerMask" className="dimmed dp-block" style={{zIndex:1009}}></div>
+            {props.trigger ? <div id="layerMask" className="dimmed"></div> : null}
         </div>
     )
 }
 
-export default SideBar;
+export default SideBars;
