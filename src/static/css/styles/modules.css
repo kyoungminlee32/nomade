@@ -188,7 +188,7 @@ ol[class$=List-slide] > .swiper-slide dl {width: 100%;}
 .s3 .productList-slide > .swiper-slide dd > dl {padding: 10px 0 0; width: 70%;}
 .s3 .productList-slide > .swiper-slide dd dt {width: 40%; font-size: 12px; color: #666; line-height: 1.4;}
 .s3 .productList-slide > .swiper-slide dd dd {width: 60%; font-size: 14px; font-family:'NS-b'; line-height: 1.4;} /* 금리 노출 */
-.s3 .productList-slide > .swiper-slide dd dd:first-of-type::after {display: inline-block; content: '~'; speak: none; padding-left: 5px;}
+.s3 .productList-slide > .swiper-slide dd dd:first-of-type::after {display: inline-block; content: '~'; padding-left: 5px;}
 .s3 .productList-slide > .swiper-slide dd dd:last-of-type {color: #ff4848;}
 
 /* 송금한도 슬라이더 */
@@ -574,11 +574,10 @@ ul.rowStyle {border-bottom: 1px solid #e0e0e0;}
 .modalFull {padding: 0; display: block; z-index: 1010; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background-color: rgba(255, 255, 255, 1);}
 
 /* Common Modal */
-.modalWrap {display: none; z-index: 1010; position: fixed; top: 0; left: 0; width: 100%; height: 100%}
 .modalWrap#modalFull {height: 100vh;}
 .dimmed_pub {background: rgba(0, 0, 0, .8);}
 .dimmed {position:fixed;z-index:1009; left:0; right:0; top:0; bottom:0; background: rgba(0, 0, 0, .7);}
-.modalDefault {display: block; z-index: 1010; position: fixed; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); min-width: 50%; /*max-width: 80%;*/ width: calc(100% - 35px); max-height: calc(100% - 60px); background-color: #fff;}
+.modalDefault {position: fixed; min-width: 50%; /*max-width: 80%;*/ width: calc(100% - 30px); max-height: calc(100% - 60px); background-color: #fff;}
 .modalWrap .columnSet {background-color: #fff;}
 
 /* loginPop */

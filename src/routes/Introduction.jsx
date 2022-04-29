@@ -1,9 +1,21 @@
-import React from "react";
+import {React, useState} from "react";
 import Header from "../components/Header";
 import Nav from "../components/Nav";
 import Collapsible from "../components/Collapsible";
+import SlideUp from "../components/SlidePopup01";
+import SlideCenter from "../components/SlidePopup02";
 
 function Introduction() {
+    const [slidecenter,setSlideCenter] =useState(false);
+    const [slidebottom,setSlideBottom] =useState(false);
+    const showCenterOPen = () => {
+      setSlideCenter(!slidecenter);
+      document.modalWrap.className='show'
+    }
+    const showBottomOPen = () => {
+      setSlideBottom(!slidebottom);
+      document.modalWrap.className='show'
+    }
     return(
       <div>
         {/* #wrap */}
@@ -17,7 +29,7 @@ function Introduction() {
                   <Collapsible label="this is the lable">
                     <div>
                       <h1>this is the Collapsible</h1>
-                      <p>react-spring is a spring-physics based animation library that should cover most of your UI related animation needs. It gives you tools flexible enough to ...</p>
+                      <p><a href="https://www.google.com" target="_blank" rel="noopener noreferrer">react-spring is a spring-physics based animation library that should cover most of your UI related animation needs. It gives you tools flexible enough to ...</a></p>
                       <p>react-spring is a spring-physics based animation library that should cover most of your UI related animation needs. It gives you tools flexible enough to ...</p>
                     </div>
                   </Collapsible>
@@ -36,6 +48,12 @@ function Introduction() {
                       <button>Submit</button>
                     </form>
                   </Collapsible>
+                  <ul className="columnSet selfBottom">
+                    <li className="colItem"><button type="button" className="btn primary cancel" onClick={showCenterOPen}>중앙 팝업열기</button></li>
+                    <li className="colItem"><button type="submit" className="btn primary submit" onClick={showBottomOPen}>하단 팝업열기</button></li>
+                  </ul>
+                  <SlideCenter fixcenter={slidecenter} setFixCenter={setSlideCenter} />
+                  <SlideUp fixbottom={slidebottom} setFixBottom={setSlideBottom} />
                 </div>
               </section>
             </div>

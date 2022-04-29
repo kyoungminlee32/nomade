@@ -14,7 +14,6 @@ function Nav() {
         <li><Link to="/nomade/UIPDA1001">UIPDA1001</Link></li>
       </ul>
     </div> 
-    
   );
 }
 
