@@ -3,8 +3,15 @@ import Header from "../../../components/Header";
 import Nav from "../../../components/Nav";
 import Tabs from "../../../components/Tabs";
 import {Link} from "react-router-dom";
+import FullPopup from "../../../components/SlidePopup04";
 
 function UIPDA02013() {
+  const [buttonPopup,setButtonPopup] = useState(false);
+	const FullPopupOpen = () => {
+		setButtonPopup(!buttonPopup);
+		document.body.className='noScroll'
+	}
+
   const [activeIndex, setActiveIndex] = useState(0);
   const tabClickHandler=(index)=>{
     setActiveIndex(index)
@@ -178,11 +185,15 @@ function UIPDA02013() {
                   <div id="tabCont7" className={activeIndex===6 ? "tabContent is-current" : "tabContent"}>보험</div>
                   <div id="tabCont8" className={activeIndex===7 ? "tabContent is-current" : "tabContent"}>골드바</div>
                 </div>
+                <ul className="columnSet selfBottom">
+                  <li className="colItem"><button type="submit" className="btn primary submit" onClick={FullPopupOpen}>Full 팝업열기</button></li>
+                </ul>
               </section>
             </div>
           </div>
         </div>
         {/* //#wrap */}
+        <FullPopup  fullBottom={buttonPopup} setFullBottom={setButtonPopup} />
     </> 
     
   )

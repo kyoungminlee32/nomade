@@ -1,10 +1,18 @@
-import React from "react";
+import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 
 function SideBars(props) {
     const hideOPen = () => {
         props.setTrigger(false);
         document.body.className=''
+    }
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [openIndex, setOpenIndex] = useState(0);
+    const tabClickHandler=(index)=>{
+        setActiveIndex(index)
+    }
+    const subtabClickHandler=(index)=>{
+        setOpenIndex(index)
     }
     return (
         <div>
@@ -26,7 +34,6 @@ function SideBars(props) {
                     </li>
                     --> */}
                     <li className="myallone_userPhoto"><Link to="#/" onClick={e => e.preventDefault()} tabIndex="-1" className="bg7" title="로그인 페이지 이동"><span><img src="/nomade/static/img/myallone/profile_sample.png" alt="사용자 프로필 사진" /></span></Link></li>
-                    
                     <li>
                         <Link to="#/" onClick={e => e.preventDefault()} title="로그인 페이지 이동">
                             <span className="greeting_msg mgB10">김농협님 오늘도 좋은하루 되세요!</span>
@@ -39,19 +46,19 @@ function SideBars(props) {
                     <ul className="columnSet">
                         <li>
                             <ul className="gnb-nav" data-level="1">
-                                <li><Link to="#/" onClick={e => e.preventDefault()} className="is-active">NH금융그룹</Link></li>
-                                <li><Link to="#/" onClick={e => e.preventDefault()}>금융상품몰</Link></li>
-                                <li><Link to="#/" onClick={e => e.preventDefault()}>간편뱅크</Link></li>
-                                <li><Link to="#/" onClick={e => e.preventDefault()}>간편결제</Link></li>
-                                <li><Link to="#/" onClick={e => e.preventDefault()}>공과금</Link></li>
-                                <li><Link to="#/" onClick={e => e.preventDefault()}>환전/송금</Link></li>
-                                <li><Link to="#/" onClick={e => e.preventDefault()}>FUN&amp;LIFE</Link></li>
-                                <li><Link to="#/" onClick={e => e.preventDefault()}>고객센터</Link></li>
+                                <li onClick={()=>tabClickHandler(0)}><Link to="#/" onClick={e => e.preventDefault()} className={activeIndex===0 ? "is-active" : ""}>NH금융그룹</Link></li>
+                                <li onClick={()=>tabClickHandler(1)}><Link to="#/" onClick={e => e.preventDefault()} className={activeIndex===1 ? "is-active" : ""}>금융상품몰</Link></li>
+                                <li onClick={()=>tabClickHandler(2)}><Link to="#/" onClick={e => e.preventDefault()} className={activeIndex===2 ? "is-active" : ""}>간편뱅크</Link></li>
+                                <li onClick={()=>tabClickHandler(3)}><Link to="#/" onClick={e => e.preventDefault()} className={activeIndex===3 ? "is-active" : ""}>간편결제</Link></li>
+                                <li onClick={()=>tabClickHandler(4)}><Link to="#/" onClick={e => e.preventDefault()} className={activeIndex===4 ? "is-active" : ""}>공과금</Link></li>
+                                <li onClick={()=>tabClickHandler(5)}><Link to="#/" onClick={e => e.preventDefault()} className={activeIndex===5 ? "is-active" : ""}>환전/송금</Link></li>
+                                <li onClick={()=>tabClickHandler(6)}><Link to="#/" onClick={e => e.preventDefault()} className={activeIndex===6 ? "is-active" : ""}>FUN&amp;LIFE</Link></li>
+                                <li onClick={()=>tabClickHandler(7)}><Link to="#/" onClick={e => e.preventDefault()} className={activeIndex===7 ? "is-active" : ""}>고객센터</Link></li>
                             </ul>
                         </li>
                         <li className="colItem">
                             <ul className="lnb" data-level="2">
-                                <li className="is-lnbon">
+                                <li className={activeIndex===0 ? "is-lnbon" : ""}>
                                     <h2><Link to="#/" onClick={e => e.preventDefault()}>NH금융그룹</Link></h2> 
                                     <ul className="lnb-nav" data-level="3">
                                         <li>
@@ -65,13 +72,13 @@ function SideBars(props) {
                                         </li>
                                     </ul>
                                 </li>
-                                <li>
+                                <li className={activeIndex===1 ? "is-lnbon" : ""}>
                                     <h2><Link to="#/" onClick={e => e.preventDefault()}>금융상품몰</Link></h2>
                                     <ul className="lnb-nav" data-level="3">
                                         <li>
-                                            <Link to="#/" onClick={e => e.preventDefault()} title="입출금계좌개설">입출금계좌개설</Link>
-                                            <div className="lnb-child">
-                                                <Link to="#/" onClick={e => e.preventDefault()} title="입출금계좌개설">입출금계좌개설</Link>
+                                            <Link to="#/" onClick={()=>subtabClickHandler(1)} title="입출금계좌개설">입출금계좌개설</Link>
+                                            <div className={openIndex===1 ? "lnb-child is-open" : "lnb-child"}>
+                                                <Link to="#/" onClick={()=>subtabClickHandler(setOpenIndex(false))} title="입출금계좌개설">입출금계좌개설</Link>
                                                 <ul data-level="4">
                                                     <li><Link to="#/" onClick={e => e.preventDefault()}>입출금계좌개설</Link></li>
                                                     <li><Link to="#/" onClick={e => e.preventDefault()}>NH주거래우대통장</Link></li>
@@ -83,9 +90,9 @@ function SideBars(props) {
                                             </div>
                                         </li>
                                         <li>
-                                            <Link to="#/" onClick={e => e.preventDefault()} title="예/적금">예/적금</Link>
-                                            <div className="lnb-child">
-                                                <Link to="#/" onClick={e => e.preventDefault()} title="예/적금">예/적금</Link>
+                                            <Link to="#/" onClick={()=>subtabClickHandler(2)} title="예/적금">예/적금</Link>
+                                            <div className={openIndex===2 ? "lnb-child is-open" : "lnb-child"}>
+                                                <Link to="#/" onClick={()=>subtabClickHandler(setOpenIndex(false))} title="예/적금">예/적금</Link>
                                                 <ul data-level="4">
                                                     <li><Link to="#/" onClick={e => e.preventDefault()}>예/적금</Link></li>
                                                     <li><Link to="#/" onClick={e => e.preventDefault()}>NH올원해봄적금</Link></li>
@@ -99,9 +106,9 @@ function SideBars(props) {
                                             </div>
                                         </li>
                                         <li>
-                                            <Link to="#/" onClick={e => e.preventDefault()} title="대출">대출</Link>
-                                            <div className="lnb-child">
-                                                <Link to="#/" onClick={e => e.preventDefault()} title="대출">대출</Link>
+                                            <Link to="#/" onClick={()=>subtabClickHandler(3)} title="대출">대출</Link>
+                                            <div className={openIndex===3 ? "lnb-child is-open" : "lnb-child"}>
+                                                <Link to="#/" onClick={()=>subtabClickHandler(setOpenIndex(false))} title="대출">대출</Link>
                                                 <ul data-level="4">
                                                     <li><Link to="#/" onClick={e => e.preventDefault()}>대출</Link></li>
                                                     <li><Link to="#/" onClick={e => e.preventDefault()}>NH e직장인대출</Link></li>
@@ -123,13 +130,13 @@ function SideBars(props) {
                                         </li>
                                     </ul>
                                 </li>
-                                <li>
+                                <li className={activeIndex===2 ? "is-lnbon" : ""}>
                                     <h2><Link to="#/" onClick={e => e.preventDefault()}>간편뱅크</Link></h2>
                                     <ul className="lnb-nav" data-level="3">
                                         <li>
-                                            <Link to="#/" onClick={e => e.preventDefault()}>올원송금</Link>
-                                            <div className="lnb-child">
-                                                <Link to="#/" onClick={e => e.preventDefault()}>올원송금</Link>
+                                            <Link to="#/" onClick={()=>subtabClickHandler(2)}>올원송금</Link>
+                                            <div className={openIndex===2 ? "lnb-child is-open" : "lnb-child"}>
+                                                <Link to="#/" onClick={()=>subtabClickHandler(setOpenIndex(false))}>올원송금</Link>
                                                 <ul data-level="4">
                                                     <li><Link to="#/" onClick={e => e.preventDefault()}>송금하기</Link></li>
                                                     <li><Link to="#/" onClick={e => e.preventDefault()}>자주쓰는송금</Link></li>
@@ -138,9 +145,9 @@ function SideBars(props) {
                                             </div>
                                         </li>
                                         <li>
-                                            <Link to="#/" onClick={e => e.preventDefault()}>더치페이</Link>
-                                            <div className="lnb-child">
-                                                <Link to="#/" onClick={e => e.preventDefault()}>더치페이</Link>
+                                            <Link to="#/" onClick={()=>subtabClickHandler(3)}>더치페이</Link>
+                                            <div className={openIndex===3 ? "lnb-child is-open" : "lnb-child"}>
+                                                <Link to="#/" onClick={()=>subtabClickHandler(setOpenIndex(false))}>더치페이</Link>
                                                 <ul data-level="4">
                                                     <li><Link to="#/" onClick={e => e.preventDefault()}>더치페이요청</Link></li>
                                                     <li><Link to="#/" onClick={e => e.preventDefault()}>더치페이내역조회</Link></li>
@@ -177,7 +184,7 @@ function SideBars(props) {
                                         </li>
                                     </ul>
                                 </li>
-                                <li>
+                                <li className={activeIndex===3 ? "is-lnbon" : ""}>
                                     <h2><Link to="#/" onClick={e => e.preventDefault()}>간편결제</Link></h2>
                                     <ul className="lnb-nav" data-level="3">
                                         <li>
@@ -195,7 +202,7 @@ function SideBars(props) {
                                         </li>
                                     </ul>
                                 </li>
-                                <li>
+                                <li className={activeIndex===4 ? "is-lnbon" : ""}>
                                     <h2><Link to="#/" onClick={e => e.preventDefault()}>공과금</Link></h2>
                                     <ul className="lnb-nav" data-level="3">
                                         <li>
@@ -232,7 +239,7 @@ function SideBars(props) {
                                         </li>
                                     </ul>
                                 </li>
-                                <li>
+                                <li className={activeIndex===5 ? "is-lnbon" : ""}>
                                     <h2><Link to="#/" onClick={e => e.preventDefault()}>환전/송금</Link></h2>
                                     <ul className="lnb-nav" data-level="3">
                                         <li>
@@ -256,7 +263,7 @@ function SideBars(props) {
                                         </li>
                                     </ul>
                                 </li>
-                                <li>
+                                <li className={activeIndex===6 ? "is-lnbon" : ""}>
                                     <h2><Link to="#/" onClick={e => e.preventDefault()}>FUN&amp;LIFE</Link></h2>
                                     <ul className="lnb-nav" data-level="3">
                                         <li>
@@ -285,7 +292,7 @@ function SideBars(props) {
                                         </li>
                                     </ul>
                                 </li>
-                                <li>
+                                <li className={activeIndex===7 ? "is-lnbon" : ""}>
                                     <h2><Link to="#/" onClick={e => e.preventDefault()}>고객센터</Link></h2>
                                     <ul className="lnb-nav" data-level="3">
                                         <li>
