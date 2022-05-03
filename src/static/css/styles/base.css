@@ -73,7 +73,6 @@ textarea {resize: none;}
 			src: url('/public/static/fonts/NotoSansKR-Medium.otf') format('opentype'),
 			url('/public/static/fonts/NotoSansKR-Medium.woff') format('woff'),
 			url('/public/static/fonts/NotoSansKR-Medium.woff2') format('woff2');
-			font-weight:500;
 			}
 
 /*@font-face{font-family:'Noto Sans';src:url('/public/static/fonts/NotoSansKR-Regular.otf')}

@@ -3171,7 +3171,7 @@ h2 + .boardList7{margin-top:15px}
 .prodMainTop > a {width:100%; height:100%;}
 .prodMainList > li {background-color:#fff; display:flex; justify-content:space-between; align-items:center; width:100%; padding:1.5rem; border-top:1px solid #f2f2f4;}
 .prodMainList > li:first-child {border-top:0;}
-.prodMainList > li .prodMainLeft {}
+.prodMainList > li a{display:flex; justify-content:space-between; align-items:center; width:100%;z-index: 100;}
 .prodMainList > li .prodMainLeft div {display:flex; flex-flow:column-reverse;}
 .prodMainList > li .prodMainLeft h5 {color:#111; font-family:'NS-b';font-weight:500; font-size:1.125rem; line-height:1.125rem; margin-bottom:.1875rem;}
 .prodMainList > li .prodMainLeft ul.prodBadgeList {display:flex;}
@@ -3217,10 +3217,10 @@ h2 + .boardList7{margin-top:15px}
 .prodMain04 .prodMainTop a {background:url('/public/static/img/2020/mall/prod_main04.png') no-repeat right 0 bottom .5rem; background-size:10.21875rem 8.40625rem; background-size:100% auto;}
 .prodSwiperWrap h5 {color:#111; font-weight:700; font-size:1.375rem; margin-top:1rem; font-weight:normal;}
 .prodSwiperWrap p {color:#111; line-height:1.25rem; margin-top:.5rem;}
-.prodSwiperWrap .swiper-pagination.swiper-pagination-bullets {padding:0 2rem; text-align:left; bottom:2.125rem;}
+.prodSwiperWrap .swiper-pagination.swiper-pagination-bullets {padding:0 2rem; text-align:left; bottom:2.125rem;top:15rem;}
 .prodSwiperWrap .swiper-pagination-bullet {background-color:#e0e0e4; width:10px; height:10px; opacity:1;}
 .prodSwiperWrap .swiper-pagination-bullet-active {background-color:#08862a;}
-[class^="swiper-slide prodSlide"] {min-height: calc(100% - 9.125rem); min-height: calc(100vh - 9.125rem); padding-bottom:3.75rem; /*padding-bottom:7.5rem;*/}
+[class^="swiper-slide prodSlide"] {min-height: calc(100% - 9.125rem); min-height: calc(100vh - 9.125rem); /*padding-bottom:3.75rem;*/ /*padding-bottom:7.5rem;*/}
 /*.tabContSwiper.swiper-container-autoheight.swiper-container-ios .swiper-wrapper {transition-property:none !important;}*/
 .tabContSwiper.swiper-container-autoheight.swiper-container-ios [class^="swiper-slide prodSlide"] {height:calc(100vh - 5.5rem); overflow-y:auto; -webkit-overflow-scrolling:touch;}
 .swiper-slide.prodSlide5 {background-color:#f2f2f4; min-height: calc(100% - 6.125rem); min-height: calc(100vh - 6.125rem);}
@@ -3256,3 +3256,4 @@ h2 + .boardList7{margin-top:15px}
 .badge.green {background-color:#defae0; color:#08862a;}
 .badge.red {background-color:#ec0c0c; color:#fff !important;}
 .badge.blue {background-color:#e1eaf9; color:#2c6dd4;}
+
