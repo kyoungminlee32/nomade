@@ -111,7 +111,7 @@
 /* global */
 .header,
 div[data-role="content"],
-.footer {margin: 0 auto; position: relative; width: 100%; max-width: 1440px;}
+.footer {margin: 0 auto; position: relative; width: 100%;}
 
 /* column span  12-columns base */
 .rowSpan1 {width: 10% !important;} /* 12 columns */
@@ -172,7 +172,7 @@ div[data-role="content"],
 .clearfix::after {content:''; clear:both; display:table;}
 
 /* //////////////// 3. Header ////////////////*/
-.header {padding: 0; overflow: hidden; background: #fff; border-bottom: 1px solid #e0e0e0; position: fixed; top: 0; left: 50%; z-index: 1000; height: 45px; -webkit-transform: translateX(-50%); transform: translateX(-50%);}
+.header {padding: 0; overflow: hidden; background: #fff; position: fixed; top: 0; left: 50%; z-index: 1000; height: 45px; -webkit-transform: translateX(-50%); transform: translateX(-50%);}
 
 .focusIn.header {position: absolute;}
 
@@ -228,9 +228,10 @@ div[data-role="content"],
 
 /* //////////////// 4. Contents	 ////////////////*/
 #wrap {width: 100%; overflow-x: hidden;}
+/* #container{margin:0 auto;max-width: 1440px;} */
 div[data-role="content"]:not(.modal-contents) {margin-top: 45px; overflow: hidden; min-height: calc(100vh - 45px);} /* 컨텐츠 이중 스크롤 방지를 위해 테스트 css overflow:hidden 삽입 */
 div[data-role="content"].splashPage {margin-top:0; min-height:100vh;}
-section {padding: 15px; -webkit-overflow-scrolling: touch;}
+section {-webkit-overflow-scrolling: touch;}
 .fullWidth,.tabContent.fullWidth,.accordion .fullWidth {padding: 0;}
 .with-fixedBtn {margin-bottom: 65px;}
 .with-fixedBtn.with-pixedBtn_bannrer {margin-bottom:200px;}
